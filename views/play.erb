@@ -6,27 +6,31 @@
   </head>
   <body>
 
-<%= @player_1.name%>, select your move!
-<p>
-<p>
+<%= @player_1.name %>, select your move!
+
 <form action="/play" method="post">
  
   <div id="rockpaperscissors">
     <div class="icon-container">
-      <button type="submit" name="move" value="rock" id="rock"><img src="https://img.icons8.com/color/48/000000/hand-rock.png"/></button>
-      <p> Rock </p>
+      <input type="submit" name="move" value="rock" id="rock">
+
     </div>
     <div class="icon-container">
-      <button type="submit" name="move" value="scissors" id="scissors"><img src="https://img.icons8.com/color/48/000000/hand-scissors--v1.png"/></button>
-      <p>Scissors</p>
+      <input type="submit" name="move" value="scissors" id="scissors">
+
     </div>
     <div class="icon-container">
-      <button type="submit" name="move" value="paper" id="paper"><img src="https://img.icons8.com/color/48/000000/hand.png"/></button>
-      <p>Paper</p>
+      <input type="submit" name="move" value="paper" id="paper">
+
     </div>
   </div>
-  <%# <input type="submit" name="choice" value="rock">
-  <input type="submit" name="choice" value="paper">
-  <input type="submit" name="choice" value="scissors"> %>
 </form>
+
+<div class="names-container">
+  <h2><%= @player_1.name %></h2><p>
+  <h2><%= @player_1.score %></h2>
+
+  <h2>Computer</h2>
+  <h2><%= @player_2.score %></h2>
+</div>
 

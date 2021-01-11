@@ -6,11 +6,14 @@ feature 'Player option' do
     expect(page).to have_button('paper')
     expect(page).to have_button('scissors')
   end
+end
 
-  scenario 'choose a move' do
+feature 'Computer' do
+  scenario 'choose random option' do
     visit '/'
     sign_in_and_play
+  
     click_button('rock')
-    expect(page).to have_content('You chose Rock!')
+    expect(page).to have_content("Computer chose Scissors!")
   end
 end

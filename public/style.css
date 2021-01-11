@@ -4,3 +4,9 @@
   justify-content: space-evenly;
   align-items: center;
 }
+
+.names-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 12em;
+}
